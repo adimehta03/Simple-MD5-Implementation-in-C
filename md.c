@@ -164,7 +164,7 @@ int main( int argc, char *argv[] )
         char msg[30]; // store the string
         printf("How many strings do you wish to encrypt, max being 10?\n");
         scanf("%d",&n);//number of strings
-        if((n>=1 && n<=10) && isDigit(n))//checking if n is 1<=n<=10 and is a number
+        if(n>=1 && n<=10)//checking if n is 1<=n<=10
         {
             for(int i = 1; i <= n; i++){//intake the strings from the [user]
             printf("Please enter string %d which you wish to encrypt:\n",i); //format specifier %d = integers
@@ -181,7 +181,7 @@ int main( int argc, char *argv[] )
             printf("\n");
             }
         }
-        else//if not a number
+        else//if not a number between 1 to 10
         {
             printf("Please try again\n");
             goto start;//goto can be accessed only in the function where it is defined
